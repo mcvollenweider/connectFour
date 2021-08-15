@@ -1,0 +1,63 @@
+.header{
+    font-family:consolas;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.rules{
+    font-family:consolas;
+    font-size: 15px;
+    text-align: center;
+    margin: 5px;
+}
+.players{
+    font-family:consolas;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 5px;
+    
+}
+.playerOne input [type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 2px solid red;
+    box-sizing: border-box;
+    
+  }
+  .playerTwo input [type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 2px solid yellow;
+    box-sizing: border-box;
+  }
+.gameBoard{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 240px;
+    background-color:#0074D9;
+    border: 20px solid #0074D9;
+    box-shadow: inset;
+    grid-gap: 10px;
+}
+.gameBoard div {
+    width: 20px; 
+    height: 20px;
+    border: 5px solid #7FDBFF;
+    border-radius: 50%;
+    padding: 2px;
+  }
+.red {
+    border: 5px solid #7FDBFF;
+    background-color: red;
+    border-radius: 50%;
+    padding: 2px;
+}
+.yellow {
+    border: 5px solid #7FDBFF;
+    background-color: yellow;
+    border-radius: 50%;
+    padding: 2px;
+}
