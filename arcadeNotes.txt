@@ -1,33 +1,31 @@
-Arcade Project Logic
+const check1 = winArray[[y][0]];
+    const check2 = winArray[[y][1]];
+    const check3 = winArray[[y][2]];
+    const check4 = winArray[[y][3]];
 
-Array full of Arrays: 7 columns, by 6 rows
-	outer array holds all the 'columns' (aka each inner array)
-	and the column holds pieces
+    
+    if (
+      check1 === playerOne[[y][0]] &&
+      check1 === playerOne[[y][1]] &&
+      check1 === playerOne[[y][2]] &&
+      check1 === playerOne[[y][3]] 
+      )//end if condition
+    {
+      window.alert("Player 1 wins!")
+    }//end if statement
 
-
-let current player = 1
-toggle between player 1/2
-
-
-make divs for grid for each square html -- make an extra class row in order to account for taken
-
-create onClicks javascript
-taken class added to clicked div/square {
-if statement +7 checks the div directly below}
-nested if 
-if 
-else if -- addClass going to work color/taken
-else
-cant go here alert {why isnt return breaking from function???/}
-
-win function [winning aray possibilities
-check player array vs win array for WIN
-
-
-
-
-
-
+    if (
+      check1 === playerTwo[[y][0]] &&
+      check1 === playerTwo[[y][1]] &&
+      check1 === playerTwo[[y][2]] &&
+      check1 === playerTwo[[y][3]] 
+      )//end if condition
+    {
+      window.alert("Player 1 wins!")
+    }//end if statement  
+  
+  }//end for
+}//end winningPlayer
 
 
 
@@ -54,25 +52,8 @@ check player array vs win array for WIN
 
 
 
-<!-- CONNECT FOUR
-As users playing a two player game we want to:
 
-    1.  enter our names and have them displayed
-    2.  have our order chosen for us by the game
-    3.  take turns by dropping our chip into a column on the grid
-    4.  not be able to drop a chip into a totally filled column
-    5.  be told when a move causes a player to win, or to draw
-    6.  start the game over without having to reset the browser
 
-As a user playing a single player game I additionally want to:
 
-    1.  see the name 'Computer' displayed as my opponent
-    2.  have the Computer player choose columns as if it were a human player
 
-As a user playing a single player game I would be delighted if:
 
-    the Computer chooses the correct column for a win, when possible -->
-
-Array full of Arrays: 7 columns, by 6 rows
-	outer array holds all the 'columns' (aka each inner array)
-	and the column holds pieces

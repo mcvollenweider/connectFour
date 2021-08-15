@@ -83,33 +83,35 @@ const winArray = [
 ]//end WinArray
 
 function winningPlayer(){
+  
+
   for (let y = 0; y < winArray.length; y++){
 
+    const check1 = winArray[y[0]];
+    const check2 = winArray[y[1]];
+    const check3 = winArray[y[2]];
+    const check4 = winArray[y[3]];
 
-    const check1 = $('#')[winArray[y][0]];
-    const check2 = $('#')[winArray[y][1]];
-    const check3 = $('#')[winArray[y][2]];
-    const check4 = $('#')[winArray[y][3]];
-
-    console.log(check1)
     if (
-      check1 === playerOne[[y][0]] &&
-      check1 === playerOne[[y][1]] &&
-      check1 === playerOne[[y][2]] &&
-      check1 === playerOne[[y][3]] 
+      check1 === playerOne[0] &&
+      check2 === playerOne[1] &&
+      check3 === playerOne[2] &&
+      check4 === playerOne[3] 
       )//end if condition
     {
       window.alert("Player 1 wins!")
+
     }//end if statement
 
     if (
-      check1 === playerTwo[[y][0]] &&
-      check1 === playerTwo[[y][1]] &&
-      check1 === playerTwo[[y][2]] &&
-      check1 === playerTwo[[y][3]] 
+      check1 === playerTwo[0] &&
+      check2 === playerTwo[1] &&
+      check3 === playerTwo[2] &&
+      check4 === playerTwo[3] 
       )//end if condition
     {
       window.alert("Player 1 wins!")
+
     }//end if statement  
   
   }//end for
@@ -118,6 +120,7 @@ function winningPlayer(){
 
 for (let i = 0; i < 49; i++) {
   board.push([i])
+  console.log(typeof board[i])
 
   $('#b' + i).on("click", function(){
   
@@ -146,7 +149,6 @@ for (let i = 0; i < 49; i++) {
       }//end elseIf
     
       
-      winningPlayer()
 
     }//end if
     else  {
