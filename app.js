@@ -86,10 +86,10 @@ function winningPlayer(){
   for (let y = 0; y < winArray.length; y++){
 
 
-    const check1 = $('.board div')[winArray[y][0]];
-    const check2 = $('.board div')[winArray[y][1]];
-    const check3 = $('.board div')[winArray[y][2]];
-    const check4 = $('.board div')[winArray[y][3]];
+    const check1 = $('#')[winArray[y][0]];
+    const check2 = $('#')[winArray[y][1]];
+    const check3 = $('#')[winArray[y][2]];
+    const check4 = $('#')[winArray[y][3]];
 
     console.log(check1)
     if (
