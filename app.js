@@ -83,28 +83,30 @@ const winArray = [
 ]//end WinArray
 
 function winningPlayer(){
-  for (let i = 0; i < winArray.length; i++){
-    const check1 = $('.board div')[winArray[i][0]];
-    const check2 = $('.board div')[winArray[i][1]];
-    const check3 = $('.board div')[winArray[i][2]];
-    const check4 = $('.board div')[winArray[i][3]];
+  for (let y = 0; y < winArray.length; y++){
 
 
+    const check1 = $('.board div')[winArray[y][0]];
+    const check2 = $('.board div')[winArray[y][1]];
+    const check3 = $('.board div')[winArray[y][2]];
+    const check4 = $('.board div')[winArray[y][3]];
+
+    console.log(check1)
     if (
-      check1 === playerOne[[i][0]] &&
-      check1 === playerOne[[i][1]] &&
-      check1 === playerOne[[i][2]] &&
-      check1 === playerOne[[i][3]] 
+      check1 === playerOne[[y][0]] &&
+      check1 === playerOne[[y][1]] &&
+      check1 === playerOne[[y][2]] &&
+      check1 === playerOne[[y][3]] 
       )//end if condition
     {
       window.alert("Player 1 wins!")
     }//end if statement
 
     if (
-      check1 === playerTwo[[i][0]] &&
-      check1 === playerTwo[[i][1]] &&
-      check1 === playerTwo[[i][2]] &&
-      check1 === playerTwo[[i][3]] 
+      check1 === playerTwo[[y][0]] &&
+      check1 === playerTwo[[y][1]] &&
+      check1 === playerTwo[[y][2]] &&
+      check1 === playerTwo[[y][3]] 
       )//end if condition
     {
       window.alert("Player 1 wins!")
@@ -119,40 +121,38 @@ for (let i = 0; i < 49; i++) {
 
   $('#b' + i).on("click", function(){
   
-    let nextPiece = $(this).attr("id").toString()
-    nextPiece = parseInt((nextPiece.substring(1)))+7
-    console.log(typeof nextPiece)
-    nextPiece = 1
-    console.log($(`#b${nextPiece}`))
-    console.log($(this).hasClass('taken'))
-    //test
-    if ($("#"+ nextPiece).hasClass('taken') 
-    
-    && !$(this).attr("id").hasClass('taken')){
-    
-      console.log("!!!!")
+    let nextPiece = +$(this).attr('id').substring(1) + 7
+
+    if ($("#b"+ nextPiece).hasClass('taken') && !$(this).hasClass('taken')){
+      
       if ( currentPlayer === 1) {
        
-        $(this).addClass('red','taken')
+        $(this).addClass('red');
+        $(this).addClass('taken');
         playerOne.push(board[i]);
         currentPlayer = 2;
         window.alert("Player 2 turn")
-
+        console.log(playerOne)
       }//end if
     
       else if (currentPlayer === 2) {
         
-        $(this).addClass('yellow', 'taken')
+        $(this).addClass('yellow');
+        $(this).addClass('taken');
         playerTwo.push(board[i]);
-        currentPlayer = 2;
+        currentPlayer = 1;
         window.alert("Player 1 turn")
+        console.log(playerTwo)
       }//end elseIf
     
-    else 
-    
-      window.alert("Please select another spot")
-    
+      
+      winningPlayer()
+
     }//end if
+    else  {
+      window.alert("Please select another spot")
+    }//end else
+   
 
   })//end clickFunction
 
