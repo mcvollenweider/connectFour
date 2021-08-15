@@ -125,7 +125,7 @@ for (let i = 0; i < 49; i++) {
     nextPiece = 1
     console.log($(`#b${nextPiece}`))
     console.log($(this).hasClass('taken'))
-    
+    //test
     if ($("#"+ nextPiece).hasClass('taken') 
     
     && !$(this).attr("id").hasClass('taken')){
